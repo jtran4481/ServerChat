@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ChatModule/ChatModule.iml" filepath="$PROJECT_DIR$/ChatModule/ChatModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ChatServer.iml" filepath="$PROJECT_DIR$/src/ChatServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiUserChat.iml" filepath="$PROJECT_DIR$/MultiUserChat.iml" />
+    </modules>
+  </component>
+</project>
