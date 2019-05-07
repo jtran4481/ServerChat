@@ -11,20 +11,9 @@ public class ServerMain {
 
         int port = 8818;
         Server server = new Server(port);
-        try {
-            ServerSocket serverSocket = new ServerSocket(port);
-            while(true) {
-                System.out.print("About to accept client connection...");
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("Accepted connection from " + clientSocket);
-                ServerWorker worker = new ServerWorker(clientSocket);
-                worker.start();
-                //outputStream.write("hello world\n".getBytes());
+        server.start();
 
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
 
