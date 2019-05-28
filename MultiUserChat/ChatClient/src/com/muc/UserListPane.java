@@ -5,6 +5,10 @@ import java.awt.event.MouseAdapter;
 import java.io.IOException;
 import java.awt.event.MouseEvent;
 
+/**
+ * Provides the list of online users and lets you chat
+ * Works based on jframe
+ */
 
 public class UserListPane extends JPanel implements UserStatusListener{
 

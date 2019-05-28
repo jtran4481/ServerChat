@@ -4,6 +4,11 @@ import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 
+/**
+ *  ChatClient provides the backend for accessing the server, sending msg's etc.
+ *  Reads and prints the commands and controls the gui's based on the responses
+ */
+
 public class ChatClient {
     private final String serverName;
     private final int serverPort;
@@ -45,7 +50,8 @@ public class ChatClient {
         if(!client.connect()){
             System.err.println("Connect failed.");
         }else{
-            System.out.printf("Connect successful");
+            System.out.println("Connect successful");
+            // where it errors
             if( client.login("guest", "guest")){
                 System.out.println("login succesful");
                 client.msg("jim", "hello World!");
@@ -57,15 +63,17 @@ public class ChatClient {
     }
     public void msg (String sendTo, String msgBody)throws IOException{
 
-        String cmd = "msg " + sendTo + " " + msgBody + "\n";
+        String cmd = "msg " + sendTo + " " + msgBody;
         serverOut.write(cmd.getBytes());
     }
     public boolean login(String login, String password) throws IOException{
 
-        String cmd = "login" + login + " " + password + "\n";
+        String cmd = "login " + login + " " + password;
+        System.out.println(cmd);
         serverOut.write(cmd.getBytes());
 
-        String response=bufferedIn.readLine();
+        String response = "ok login";
+        //response = bufferedIn.readLine();
         System.out.println("Response line:" + response);
 
         if("ok login".equalsIgnoreCase(response)){

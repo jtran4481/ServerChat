@@ -6,6 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+/**
+ * Creates a jpanel window where user inputs username and password
+ */
+
 public class LoginWindow extends JFrame {
 
     private final ChatClient client;
